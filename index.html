@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1.0">
-    <title>Jeff Dye</title>
-    <meta name="description" content="Jeff Dye's personal portfolio site.">
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/aa8008e70c.js" crossorigin="anonymous"></script>
-    <meta />
-  </head>
+<head>
+  <meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1.0">
+  <title>Jeff Dye</title>
+  <meta name="description" content="Jeff Dye's personal portfolio site.">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/aa8008e70c.js" crossorigin="anonymous"></script>
+  <meta />
+</head>
 
-  <body>
-    <div class="header">
-      <img src="./assets/headshot-square.jpg" class="headshot" style="width: 16%" />
+<body>
+  <div class="header">
+    <div></div>
+    <div class="contact">
+      <img src="./assets/headshot-square.jpg" class="headshot" style="width: 56%" />
       <h1>Jeff Dye</h1>
       <div class="header-links">
         <a href="https://github.com/jeffbdye" target="_blank">
@@ -24,50 +26,64 @@
         </a>
       </div>
     </div>
+    <svg class="flow" xmlns="http://www.w3.org/2000/svg">
+      <path class="stroke" stroke="#00a0e6" stroke-width="75" d="m375,-100 l500,500"></path>
+      <path class="stroke" stroke="#007fc4" stroke-width="75" d="m275,-100 l500,500"></path>
+      <path class="stroke" stroke="#002d42" stroke-width="100" d="m175,-100 l500,500"></path>
+      <path class="stroke" stroke="#007fc4" stroke-width="75" d="m75,-100 l500,500"></path>
+      <path class="stroke" stroke="#00a0e6" stroke-width="75" d="m0,-100 l500,500"></path>
+    </svg>
+  </div>
 
-    <h2>
-      About
-    </h2>
-    <div class="about">
-      <p class="bio">
-        Hey! I'm a software engineer focused on delivering the right solution for the customer.
-        It starts with empathy to better understand what needs to be built (and what doesn't).
-        Execution best happens iteratively, where teams can ship high quality changes consistently and confidently.
-        Successful delivery relies on careful observability of systems and how users accomplish their goals.
+  <h2>
+    About
+  </h2>
+  <div class="about">
+    <p class="bio">
+      Hey! I'm a software engineer focused on delivering the right solution for the customer.
+      It starts with empathy to better understand what needs to be built (and what doesn't).
+      Execution best happens iteratively, where teams can ship high quality changes consistently and confidently.
+      Successful delivery relies on careful observability of systems and how users accomplish their goals.
+    </p>
+  </div>
+
+  <h2>
+    Projects
+  </h2>
+  <div class="projects">
+    <div class="runmap project-item">
+      <img src="./assets/runmap-med.png" />
+      <h4>
+        RunMap
+      </h4>
+      <p>
+        Designed for anyone looking to plot out a run/bike/walk and find out the distance of their route.
       </p>
-    </div>
-
-    <h2>
-      Projects
-    </h2>
-    <div class="projects">
-      <div class="runmap project-item">
-        <img src="./assets/runmap-med.png" />
-        <p>
-          RunMap
-        </p>
-        <div class="project-links">
-          <a href="https://github.com/jeffbdye/RunMap" target="_blank">
-            <i class="fas fa-code"></i>
-          </a>
-          <a href="https://runmap.run" target="_blank">
-            <i class="fas fa-globe"></i>
-          </a>
-        </div>
-      </div>
-      <div class="aesthetic project-item">
-        <img src="./assets/at-narrow.png" />
-        <p>
-          A e s t h e t i c T e x t
-        </p>
-        <a href="https://github.com/jeffbdye/AestheticText" target="_blank">
+      <div class="project-links">
+        <a href="https://github.com/jeffbdye/RunMap" target="_blank">
           <i class="fas fa-code"></i>
         </a>
-        <a href="https://aesthetictext.com" target="_blank">
+        <a href="https://runmap.run" target="_blank">
           <i class="fas fa-globe"></i>
         </a>
       </div>
     </div>
-  </body>
+    <div class="aesthetic project-item">
+      <img src="./assets/at-narrow.png" />
+      <h4>
+        A e s t h e t i c T e x t
+      </h4>
+      <p>
+        Applies ｗｉｄｅ formatting to the text you provide and lets you easily copy it to share with your friends.
+      </p>
+      <a href="https://github.com/jeffbdye/AestheticText" target="_blank">
+        <i class="fas fa-code"></i>
+      </a>
+      <a href="https://aesthetictext.com" target="_blank">
+        <i class="fas fa-globe"></i>
+      </a>
+    </div>
+  </div>
+</body>
 
 </html>
