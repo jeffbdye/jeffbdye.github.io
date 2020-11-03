@@ -4,6 +4,7 @@
 
 .header h1 {
   text-align: center;
+  white-space: nowrap;
 }
 
 .header {
