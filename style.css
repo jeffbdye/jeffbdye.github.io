@@ -6,78 +6,140 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+  background: #f8f9fa;
   color: #333;
   line-height: 1.6;
 }
 
-.top-section {
-  display: flex;
-  min-height: 500px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
-
-.contact {
-  flex: 0 0 33.333%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 1rem;
-  background: rgba(255, 255, 255, 0.5);
+/* ── Hero ── */
+.hero {
   position: relative;
-  z-index: 10;
-}
-
-.contact h1 {
-  text-align: center;
-  white-space: nowrap;
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  color: #002d42;
-  margin: 1rem 0;
-}
-
-.content-section {
-  flex: 0 0 66.666%;
-  position: relative;
+  background: #002d42;
   overflow: hidden;
+  min-height: 380px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 
 .flow {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
   z-index: 1;
 }
 
-.about-experience {
+.stroke {
+  fill: none;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 2.2s ease-out forwards;
+}
+
+.stroke:nth-child(1) { animation-delay: 0s; }
+.stroke:nth-child(2) { animation-delay: 0.15s; }
+.stroke:nth-child(3) { animation-delay: 0.3s; }
+.stroke:nth-child(4) { animation-delay: 0.45s; }
+.stroke:nth-child(5) { animation-delay: 0.6s; }
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.hero-content {
   position: relative;
   z-index: 2;
-  padding: 2rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3rem 6%;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-.about-experience h2 {
-  margin: 1.5rem 0 1rem 0;
+.hero-text {
+  color: #fff;
 }
 
-.about-experience h2:first-child {
+.hero-text h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+
+.hero-title {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: #bbd2db;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.hero-blurb {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 500px;
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+/* ── About / Experience ── */
+.about-experience {
+  background: #fff;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.about-experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 6%;
+}
+
+.about-experience-grid h2 {
+  margin: 0 0 1rem 0;
+  padding: 0 0 0.5rem 0;
+  max-width: none;
+}
+
+.about-experience-grid h2::after {
+  left: 0;
+}
+
+.about-experience-grid .paragraph {
+  margin: 0;
+}
+
+/* ── Skills ── */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto 3rem auto;
+  padding: 0 6%;
+}
+
+.skill-group h4 {
+  margin: 0 0 0.6rem 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #007fc4;
+  font-weight: 600;
+}
+
+.skill-group .tech-tags {
+  justify-content: flex-start;
+  padding-top: 0;
   margin-top: 0;
-}
-
-.about-experience .paragraph {
-  margin: 0 0 1.5rem 0;
-}
-
-/* SVG Animation Styles */
-.geo-shape {
-  transition: opacity 0.3s ease;
 }
 
 /* just so vscode displays each used in the palette */
@@ -86,26 +148,23 @@ body {
   background-color: #ffffff;
   background-color: #007fc4;
   background-color: #00a0e6;
-  background-color: #002d42;
-  background-color: #007fc4;
-  background-color: #00a0e6;
 }
 
-
 h2 {
-  margin: 3rem 8% 1.5rem 8%;
+  margin: 3rem auto 1.5rem auto;
+  padding: 0 6% 0.5rem 6%;
   color: #002d42;
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 600;
   position: relative;
-  padding-bottom: 0.5rem;
+  max-width: 1100px;
 }
 
 h2::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 6%;
   width: 60px;
   height: 3px;
   background: linear-gradient(90deg, #00a0e6, #007fc4);
@@ -120,26 +179,27 @@ h4 {
 
 .headshot {
   display: block;
-  margin: 0 auto;
+  flex-shrink: 0;
   border-radius: 50%;
-  box-shadow: 0 4px 20px rgba(0, 45, 66, 0.2);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  border: 3px solid rgba(0, 160, 230, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .headshot:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 30px rgba(0, 160, 230, 0.3);
+  transform: scale(1.04);
+  box-shadow: 0 6px 32px rgba(0, 160, 230, 0.5);
 }
 
 .header-links {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
 }
 
 .header-links a {
-  color: #007fc4;
+  color: rgba(255, 255, 255, 0.85);
   transition: all 0.3s ease;
   width: 40px;
   height: 40px;
@@ -147,7 +207,8 @@ h4 {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(0, 160, 230, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .header-links a i {
@@ -155,8 +216,9 @@ h4 {
 }
 
 .header-links a:hover {
-  color: #00a0e6;
-  background: rgba(0, 160, 230, 0.2);
+  color: #fff;
+  background: rgba(0, 160, 230, 0.5);
+  border-color: #00a0e6;
   transform: translateY(-3px);
 }
 
@@ -305,57 +367,51 @@ strong {
   font-weight: 600;
 }
 
-@media only screen and (max-width: 968px) {
-  .top-section {
-    flex-direction: column;
-  }
-  
-  .contact {
-    flex: 1;
-    min-height: 300px;
-  }
-  
-  .content-section {
-    flex: 1;
-    min-height: 400px;
-  }
-  
-  .about-experience {
-    padding: 2rem 1.5rem;
-  }
-}
-
 @media only screen and (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 6%;
+    gap: 1.5rem;
+  }
+
+  .hero-blurb {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header-links {
+    justify-content: center;
+  }
+
+  .about-experience-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 6%;
+  }
+
+  .about-experience-grid h2 {
+    margin: 0 0 0.75rem 0;
+    padding: 0 0 0.5rem 0;
+  }
+
   .projects {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    margin: 2rem 5%;
   }
-  
+
   .projects img {
     height: 160px;
-  }
-  
-  h2 {
-    margin: 2rem 5% 1rem 5%;
-  }
-  
-  .paragraph {
-    margin: 0 5% 1.5rem 5%;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .top-section {
+  .hero {
     min-height: auto;
   }
-  
-  .content-section {
-    min-height: 300px;
-  }
-  
-  .about-experience {
-    padding: 1.5rem 1rem;
+
+  .hero-content {
+    padding: 2rem 5%;
   }
   
   .projects img {

@@ -35,117 +35,105 @@
   </head>
 
   <body>
-    <div class="top-section">
-      <div class="contact">
+    <div class="hero">
+      <svg class="flow" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path class="stroke" stroke="#00a0e6" stroke-width="75" d="m375,-100 l500,500"></path>
+        <path class="stroke" stroke="#007fc4" stroke-width="75" d="m275,-100 l500,500"></path>
+        <path class="stroke" stroke="#002d42" stroke-width="100" d="m175,-100 l500,500"></path>
+        <path class="stroke" stroke="#007fc4" stroke-width="75" d="m75,-100 l500,500"></path>
+        <path class="stroke" stroke="#00a0e6" stroke-width="75" d="m0,-100 l500,500"></path>
+      </svg>
+      <div class="hero-content">
         <img
           src="./assets/headshot.jpeg"
           class="headshot"
-          style="max-width: 260px; width: 80%"
+          style="max-width: 180px; width: 40vw"
         />
-        <h1>Jeff Dye</h1>
-        <div class="header-links">
-          <a href="https://github.com/jeffbdye" target="_blank">
-            <i class="fab fa-github fa-lg"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/jeffbdye/" target="_blank">
-            <i class="fab fa-linkedin fa-lg"></i>
-          </a>
+        <div class="hero-text">
+          <h1>Jeff Dye</h1>
+          <p class="hero-title">Principal Software Engineer</p>
+          <p class="hero-blurb">9+ years building and scaling cloud-based SaaS platforms. Full-stack, platform architecture, and technical leadership.</p>
+          <div class="header-links">
+            <a href="https://github.com/jeffbdye" target="_blank" title="GitHub">
+              <i class="fab fa-github fa-lg"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jeffbdye/" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+            <a href="mailto:jeffbdye@gmail.com" title="Email">
+              <i class="fas fa-envelope fa-lg"></i>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="content-section">
-          <svg class="flow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
-          <defs>
-            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#00a0e6;stop-opacity:0.8" />
-              <stop offset="100%" style="stop-color:#002d42;stop-opacity:0.8" />
-            </linearGradient>
-            <linearGradient id="grad2" x1="100%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:#007fc4;stop-opacity:0.8" />
-              <stop offset="100%" style="stop-color:#00a0e6;stop-opacity:0.8" />
-            </linearGradient>
-          </defs>
-          
-          <!-- Rotating hexagons -->
-          <g class="geo-shape hex-1">
-            <polygon points="400,50 450,75 450,125 400,150 350,125 350,75" fill="url(#grad1)" opacity="0.7">
-              <animateTransform attributeName="transform" type="rotate" from="0 400 100" to="360 400 100" dur="20s" repeatCount="indefinite" />
-            </polygon>
-          </g>
-          
-          <g class="geo-shape hex-2">
-            <polygon points="150,200 200,225 200,275 150,300 100,275 100,225" fill="#007fc4" opacity="0.5">
-              <animateTransform attributeName="transform" type="rotate" from="0 150 250" to="-360 150 250" dur="25s" repeatCount="indefinite" />
-            </polygon>
-          </g>
-          
-          <g class="geo-shape hex-3">
-            <polygon points="650,250 700,275 700,325 650,350 600,325 600,275" fill="#00a0e6" opacity="0.6">
-              <animateTransform attributeName="transform" type="rotate" from="0 650 300" to="360 650 300" dur="30s" repeatCount="indefinite" />
-            </polygon>
-          </g>
-          
-          <!-- Animated triangles -->
-          <g class="geo-shape tri-1">
-            <polygon points="250,100 300,180 200,180" fill="url(#grad2)" opacity="0.4">
-              <animateTransform attributeName="transform" type="rotate" from="0 250 140" to="360 250 140" dur="15s" repeatCount="indefinite" />
-              <animate attributeName="opacity" values="0.4;0.7;0.4" dur="5s" repeatCount="indefinite" />
-            </polygon>
-          </g>
-          
-          <g class="geo-shape tri-2">
-            <polygon points="550,80 600,160 500,160" fill="#002d42" opacity="0.5">
-              <animateTransform attributeName="transform" type="rotate" from="0 550 120" to="-360 550 120" dur="18s" repeatCount="indefinite" />
-              <animate attributeName="opacity" values="0.5;0.8;0.5" dur="6s" repeatCount="indefinite" />
-            </polygon>
-          </g>
-          
-          <!-- Floating rectangles -->
-          <rect x="100" y="50" width="60" height="60" fill="#00a0e6" opacity="0.3" class="geo-shape rect-1">
-            <animate attributeName="y" values="50;150;50" dur="12s" repeatCount="indefinite" />
-            <animateTransform attributeName="transform" type="rotate" from="0 130 80" to="180 130 80" dur="12s" repeatCount="indefinite" />
-          </rect>
-          
-          <rect x="640" y="100" width="50" height="50" fill="#007fc4" opacity="0.4" class="geo-shape rect-2">
-            <animate attributeName="y" values="100;200;100" dur="14s" repeatCount="indefinite" />
-            <animateTransform attributeName="transform" type="rotate" from="0 665 125" to="-180 665 125" dur="14s" repeatCount="indefinite" />
-          </rect>
-          
-          <!-- Animated squares in grid pattern -->
-          <g class="grid-squares">
-            <rect x="320" y="280" width="30" height="30" fill="#002d42" opacity="0.3">
-              <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite" begin="0s" />
-            </rect>
-            <rect x="360" y="280" width="30" height="30" fill="#007fc4" opacity="0.3">
-              <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite" begin="0.5s" />
-            </rect>
-            <rect x="400" y="280" width="30" height="30" fill="#00a0e6" opacity="0.3">
-              <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite" begin="1s" />
-            </rect>
-            <rect x="440" y="280" width="30" height="30" fill="#007fc4" opacity="0.3">
-              <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite" begin="1.5s" />
-            </rect>
-            <rect x="480" y="280" width="30" height="30" fill="#002d42" opacity="0.3">
-              <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite" begin="2s" />
-            </rect>
-          </g>
-        </svg>
-        
-        <div class="about-experience">
+    </div>
+
+    <div class="about-experience">
+      <div class="about-experience-grid">
+        <div>
           <h2>About</h2>
           <p class="paragraph">
-            Hey! I'm a Principal Software Engineer with 9+ years of experience building and scaling cloud-based SaaS platforms. 
-            I focus on delivering the right solution through empathy, iterative execution, and careful observability. 
-            My work spans full-stack development, platform architecture, and technical leadership—helping teams ship high-quality 
+            Hey! I'm a Principal Software Engineer with 9+ years of experience building and scaling cloud-based SaaS platforms.
+            I focus on delivering the right solution through empathy, iterative execution, and careful observability.
+            My work spans full-stack development, platform architecture, and technical leadership—helping teams ship high-quality
             changes consistently while mentoring the next generation of engineers.
           </p>
-
+        </div>
+        <div>
           <h2>Experience</h2>
           <p class="paragraph">
-            Currently at <strong>Blackbaud</strong>, I lead teams building large-scale nonprofit SaaS products used by thousands of customers. 
-            I've architected query systems, designed global address APIs, shipped event registration platforms, and contributed to AI adoption patterns. 
-            Previously at <strong>CarMax</strong>, I optimized online appraisal experiences. Earlier work includes mobile auction software, 
+            Currently at <strong>Blackbaud</strong>, I lead teams building large-scale nonprofit SaaS products used by thousands of customers.
+            I've architected query systems, designed global address APIs, shipped event registration platforms, and contributed to AI adoption patterns.
+            Previously at <strong>CarMax</strong>, I optimized online appraisal experiences. Earlier work includes mobile auction software,
             email marketing platforms, and internal developer tooling that reduced cloud costs.
           </p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill-group">
+        <h4>Languages</h4>
+        <div class="tech-tags">
+          <span class="tag">C#</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Frameworks</h4>
+        <div class="tech-tags">
+          <span class="tag">Angular</span>
+          <span class="tag">ASP.NET Core</span>
+          <span class="tag">React</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Databases</h4>
+        <div class="tech-tags">
+          <span class="tag">Cosmos DB</span>
+          <span class="tag">MSSQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Operations</h4>
+        <div class="tech-tags">
+          <span class="tag">Azure Kubernetes</span>
+          <span class="tag">App Services</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">Digital Ocean</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Systems</h4>
+        <div class="tech-tags">
+          <span class="tag">Service Bus / Pub-Sub</span>
+          <span class="tag">WebSockets</span>
+          <span class="tag">REST / OpenAPI</span>
+          <span class="tag">Blob Storage</span>
+          <span class="tag">Azure Maps</span>
         </div>
       </div>
     </div>
@@ -153,8 +141,8 @@
     <h2>Projects</h2>
     <p class="paragraph">
       Below are some of my personal projects, most of which are just for fun.
-      Most of these projects are hosted via S3 with cloudfront in AWS, using
-      GitHub actions for CI/CD.
+      Most of these projects are hosted via S3 with CloudFront in AWS, using
+      GitHub Actions for CI/CD.
     </p>
     <div class="projects">
       <div class="project-item">
